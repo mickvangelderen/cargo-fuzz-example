@@ -4,7 +4,8 @@ More information about fuzz testing Rust projects can be found in the [rust-fuzz
 
 ## Running the fuzzer
 
-Install [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz) and a nightly Rust toolchain.
+- Install [Rust](https://rustup.rs/) and add a nightly toolchain.
+- Install [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz).
 
 Run
 
