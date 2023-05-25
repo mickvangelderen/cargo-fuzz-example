@@ -16,7 +16,15 @@ On my machine I got bored of waiting before it found the panic. Adding an input 
 
 ```sh
 mkdir -p fuzz/corpus/fuzz_target_1
-cargo fuzz run fuzz_target_1 fuzz/corpus/fuzz_target_1 fuzz/fuzz_target/fuzz_target_1/inputs
+cargo +nightly fuzz run fuzz_target_1 fuzz/corpus/fuzz_target_1 fuzz/fuzz_targets/fuzz_target_1/inputs
 ```
 
 Notice that I passed two corpus directories. The first one will be used to store intermediate results by the fuzzer. I did not want to add those to the repository.
+
+## Coverage
+
+Coverage information can be obtained for a fixed set of inputs with:
+
+```sh
+cargo +nightly fuzz coverage fuzz_target_1 fuzz/corpus/fuzz_target_1 fuzz/fuzz_targets/fuzz_target_1/inputs
+```
