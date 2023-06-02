@@ -14,7 +14,13 @@ libfuzzer-sys = "0.4"
 path = ".."
 
 [[bin]]
-name = "fuzz_target_1"
-path = "fuzz_targets/fuzz_target_1.rs"
+name = "can_panic"
+path = "fuzz_targets/can_panic.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "can_deadlock"
+path = "fuzz_targets/can_deadlock.rs"
 test = false
 doc = false
